@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/abdul-burale/multi-tenant-order-management-api/internal/config"
-	"github.com/abdul-burale/multi-tenant-order-management-api/internal/server"
+	"github.com/abdul-burale/orderflow/internal/config"
+	"github.com/abdul-burale/orderflow/internal/server"
 )
 
 func main() {

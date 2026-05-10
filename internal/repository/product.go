@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/abdul-burale/multi-tenant-order-management-api/internal/models"
+	"github.com/abdul-burale/orderflow/internal/models"
 	"github.com/google/uuid"
 )
 

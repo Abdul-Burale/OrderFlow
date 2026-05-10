@@ -1,4 +1,4 @@
-module github.com/abdul-burale/multi-tenant-order-management-api
+module github.com/abdul-burale/orderflow
 
 go 1.23.5
 

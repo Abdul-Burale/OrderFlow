@@ -1,44 +1,53 @@
-# Multi-Tenant Order Management API
+# OrderFlow
 
-## Problem Statement
-Businesses often struggle to manage multiple users, products, and orders securely while maintaining tenant isolation. This API provides a multi-tenant backend system to handle orders, users, and payments efficiently.
+OrderFlow is a multi-tenant backend API for order management. It is designed for businesses that need to manage users, products, orders, and payment workflows while keeping each tenant’s data isolated.
 
-## Project Goals
-- Provide a multi-tenant backend API for businesses
-- Enable role-based user management (Admin, Staff)
-- Support product and order creation
-- Generate Stripe payment links securely
-- Enforce strict tenant isolation and authorization
+The project is currently in active development. The goal is to build a secure backend system using Go, MongoDB, Firebase Authentication, role-based access control, and Stripe payment links.
 
-## Non-Goals
-- No customer-facing frontend (API-only project)
-- No inventory management or forecasting
-- No refunds or Stripe webhook handling
-- No analytics or reporting dashboards
+---
 
-## Architecture
-<!-- Placeholder for architecture overview, diagrams, and system flow -->
-- High-level overview of API structure, middleware, and data flow
-- Include diagrams or sketches in /docs/ folder if desired
+## Project Status
 
-## Setup & Installation
-<!-- Placeholder for instructions on how to run the project -->
-- Clone the repository
-- Install dependencies
-- Configure environment variables
-- Run the server
+**Status:** In active development
 
-## API Overview
-<!-- Placeholder for endpoints and example requests/responses -->
-- Describe main endpoints (tenants, users, products, orders)
-- Include authentication and authorization requirements
+This project is being built incrementally. The API structure, documentation, endpoint examples, authentication flow, and architecture diagrams will continue to evolve as the backend implementation is completed.
 
-## Testing
-<!-- Placeholder for future test instructions -->
-- Describe test setup and how to run tests
-- Add notes on test coverage and focus areas
+---
 
-## Contributing
-<!-- Placeholder for future contributors -->
-- Guidelines for submitting issues or pull requests
-- Code style and testing expectations
+## Purpose
+
+The main goal of OrderFlow is to demonstrate backend system design beyond basic CRUD operations.
+
+The project focuses on:
+
+- Multi-tenant data isolation
+- Secure authentication
+- Role-based access control
+- Order and product management
+- Stripe payment link generation
+- Clear API boundaries
+- Maintainable Go backend structure
+- Developer-focused documentation
+
+The important engineering challenge is not just creating endpoints. The key challenge is ensuring that every request is authenticated, scoped to the correct tenant, checked against user permissions, and safely handled by the API.
+
+---
+
+## Planned System Overview
+
+OrderFlow is designed around a request flow similar to this:
+
+```txt
+Client / API Consumer
+        ↓
+Firebase Authentication
+        ↓
+Go REST API
+        ↓
+Tenant Resolution Middleware
+        ↓
+Role-Based Access Control Middleware
+        ↓
+Route Handlers
+        ↓
+MongoDB / Stripe

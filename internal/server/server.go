@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/abdul-burale/multi-tenant-order-management-api/internal/config"
-	"github.com/abdul-burale/multi-tenant-order-management-api/internal/handlers"
-	"github.com/abdul-burale/multi-tenant-order-management-api/internal/middleware"
+	"github.com/abdul-burale/orderflow/internal/config"
+	"github.com/abdul-burale/orderflow/internal/handlers"
+	"github.com/abdul-burale/orderflow/internal/middleware"
 )
 
 func New(cfg *config.Config) *http.Server {
